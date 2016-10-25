@@ -7,16 +7,13 @@
 		if (isset ($_GET['arg1'])) {
 			echo $_GET['arg1'];
 		}
-			?>">
+	        ?>">
 	Длина катета b = <input type ="text" name="arg2" value="<?php 
 		if (isset ($_GET['arg2'])) {
 			echo $_GET['arg2'];
 		}
-		
 			?>">
 	<input type ="submit" value="Рассчитать" >
-
-
 	</form>
 
 
@@ -29,15 +26,15 @@
 		<?php 
 		
 		if (isset($_GET['arg1'])&& isset($_GET['arg2'])) {
-		$arg1=$_GET['arg1'];
-		$arg2=$_GET['arg2'];		
+			$arg1=$_GET['arg1'];
+			$arg2=$_GET['arg2'];		
 			if (!is_numeric($arg1) || !is_numeric($arg2)){
 				echo  "Введено не числовое значение ";
-				} elseif ($arg1<0 || $arg2<0){
-					echo  "Введено отрицательное значение ";
-					} else {
-						echo	number_format(calc($_GET['arg1'],$_GET['arg2']), 2, ',', ' ');
-					}	
+			} elseif ($arg1<0 || $arg2<0){
+				echo  "Введено отрицательное значение ";
+				} else {
+				echo	number_format(calc($_GET['arg1'],$_GET['arg2']), 2, ',', ' ');
+				}	
 		}
 		?>
 	</body>	
