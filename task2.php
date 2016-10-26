@@ -32,9 +32,9 @@
 				echo  "Введено не числовое значение ";
 			} elseif ($arg1<0 || $arg2<0){
 				echo  "Введено отрицательное значение ";
-				} else {
+			} else {
 				echo	number_format(calc($_GET['arg1'],$_GET['arg2']), 2, ',', ' ');
-				}	
+			}	
 		}
 		?>
 	</body>	
